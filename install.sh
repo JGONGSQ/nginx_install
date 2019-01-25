@@ -23,6 +23,9 @@ sudo systemctl start nginx
 # Check the status of nginx
 sudo systemctl status nginx
 
+# change the permission of the nginx floder; thus, later on we can configure it to the way we want.
+chown --recursive nginx:ndiabtdtools /etc/nginx
+
 
 # open port 80 and 443 using firewall-cmd
 sudo firewall-cmd --permanent --zone=public --add-service=http
